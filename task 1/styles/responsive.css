@@ -1,0 +1,95 @@
+/* Base responsive layout */
+@media (max-width: 768px) {
+  body {
+    padding: var(--space-2);
+  }
+  
+  .form-header {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .form-brand {
+    align-self: flex-start;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .form-header {
+    padding: var(--space-4);
+  }
+  
+  form {
+    padding: var(--space-4);
+  }
+  
+  .form-actions {
+    justify-content: center;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+  
+  .form-field {
+    margin-bottom: var(--space-3);
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .form-header {
+    padding: var(--space-5);
+  }
+  
+  form {
+    padding: var(--space-5);
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) {
+  /* Allow some form fields to be side by side on larger screens */
+  .form-row {
+    display: flex;
+    gap: var(--space-4);
+  }
+  
+  .form-row .form-field {
+    flex: 1;
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+  
+  .form-container {
+    box-shadow: none;
+    border: 1px solid var(--color-gray-300);
+  }
+  
+  .submit-button {
+    display: none;
+  }
+}
